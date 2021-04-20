@@ -1,0 +1,70 @@
+%set_dimension {
+    width: $width_85;
+    margin: 0 auto;
+  }
+  
+  nav {
+    width: 100%;
+    position: fixed;
+    background-color: $main_color;
+  }
+  .navbar {
+    @extend %set_dimension;
+    height: $height_80;
+    border-bottom: 1px solid grey;
+  }
+  .nav_left {
+    width: 10%;
+    float: left;
+    height: $height_80;
+  
+    .logo {
+      background-repeat: no-repeat;
+      line-height: 100px;
+    }
+  }
+  
+  .nav_right {
+    float: right;
+    height: $height_80;
+    display: flex;
+    justify-content: space-around;
+  
+    .links {
+      line-height: $height_80;
+    }
+  
+    & ul li {
+      display: inline-block;
+    }
+  
+    & i {
+      margin-left: 5px;
+    }
+  
+    & a {
+      @include a_style;
+      margin-right: 40px;
+    }
+  
+    & a:hover {
+      color: $a_hover_color;
+    }
+  
+    &:last-child {
+      margin: 0;
+    }
+  
+    & button {
+      @include button_style;
+  
+      i {
+        margin-right: 10px;
+      }
+    }
+  
+    & button:hover {
+      background-color: $button_color;
+      color: $main_color;
+    }
+  }

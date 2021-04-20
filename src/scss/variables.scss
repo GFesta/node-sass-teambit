@@ -1,0 +1,23 @@
+$width_85: 85%;
+$height_80: 80px;
+$text_colour: #58402c;
+$button_color: #30488f;
+$a_hover_colour: #0549b7;
+
+
+@mixin button_style {
+  color: $button_color;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  background-color: $main_color;
+  border: 1px solid $button_color;
+  border-radius: 10px;
+  font-weight: bold;
+}
+@mixin a_style {
+  text-decoration: none;
+  color: $text_color;
+  font-weight: bold;
+  font-size: 13px;
+}
