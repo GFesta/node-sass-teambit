@@ -11,7 +11,7 @@
   .navbar {
     @extend %set_dimension;
     height: $height_80;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #4B4A5A;
   }
   .nav_left {
     width: 10%;

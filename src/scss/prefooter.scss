@@ -1,0 +1,83 @@
+section.prefooter {
+    @extend %section_prop;
+  }
+  
+  .pink_three {
+    @extend .pink;
+    height: 850px;
+  }
+  .traditional {
+    h1 {
+      font-size: 40px;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+  }
+  
+  .column {
+    i {
+      text-align: left;
+      color: $button_color;
+    }
+    a {
+      @include a_style;
+      font-weight: normal;
+    }
+    & a:hover {
+      color: $a_hover_color;
+    }
+  }
+  
+  .text_box {
+    background-color: $main_color;
+    border: 1px solid grey;
+    font-size: 17px;
+    border-radius: 7px;
+    max-width: 600px;
+    text-align: left;
+    padding: 30px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+      p {
+        padding-bottom: 20px;
+      }
+      img {
+        max-width: 38px;
+        float: left;
+        padding-right: 15px;
+      }
+      #names {
+        font-size: 15px;
+        color: $button_color;
+        line-height: 1.4;
+      }
+      #jobs {
+        font-size: 12px;
+      }
+  }
+  
+  .buttons_end {
+    @extend %google_slack;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 20px auto;
+  
+    button {
+      @include button_style;
+      color: $main_color;
+      background-color: $button_color;
+      font-weight: normal;
+      padding-left: 15px;
+      padding-right: 15px;
+  
+      &:hover {
+        background-color: #0E14EE;
+      }
+  
+      i {
+        color: $main_color;
+        padding-right: 5px;
+      }
+    }
+  
+  }
