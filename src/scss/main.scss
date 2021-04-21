@@ -1,0 +1,85 @@
+%img_prop {
+    height: 100px;
+    width: 140px;
+    margin-top: $space_50;
+    margin-bottom: 30px;
+  }
+  
+  %section_prop {
+    width: 100%;
+    background-color: $pink_color;
+  }
+  
+  section.main {
+    @extend %section_prop;
+  }
+  
+  .pink {
+    @extend %set_dimension;
+    color: $text_color;
+    margin: 0 auto;
+    height: $height_page + 100px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .pink_two {
+    @extend .pink;
+    border: 0;
+    height: $height_page + 150px;
+  }
+  
+  .traditional {
+    h1 {
+      @extend %h1;
+      text-align: center;
+      font-size: 23px;
+      margin: $space_50 auto;
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: auto;
+    }
+  
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+  
+      h3 {
+        line-height: 1.6;
+        font-size: 18px;
+      }
+    }
+  
+    .figure {
+      height: 200px;
+      padding: 0 60px;
+  
+      img {
+        @extend %img_prop;
+      }
+    }
+  }
+  
+  .figure.cat {
+    img {
+      width: 60px;
+      height: 100px;
+    }
+  }
+  
+  .rabbit {
+    img {
+      @extend %img_prop;
+      height: inherit;
+      width: inherit;
+      max-width: 250px;
+      padding-top: $space_50 + 10px;
+      padding-bottom: 30px;
+      margin: 0 auto;
+    }
+  }
